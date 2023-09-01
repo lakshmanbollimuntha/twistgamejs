@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        header {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .button-container {
+            display: flex;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin: 5px;
+            font-family: 'Times New Roman', serif;
+            background: linear-gradient(to bottom, #4CAF50, #45a049);
+            color: white;
+        }
+        #noBtn{
+            background: linear-gradient(to bottom, #FF6A5E, #FF6A5E);
+        }
+        #yesBtn:hover {
+            background: linear-gradient(to bottom, #FF6A5E, #FF6A5E);
+        }
+
+        #noBtn:hover {
+            background: linear-gradient(to bottom,#4CAF50, #45a049 );
+        }
+        @media screen and (max-width: 767px) {
+            header {
+            font-size: 3rem;
+            
+        }}
+    </style>
+    <title>Button Game</title>
+</head>
+<body>
+    <header>Are you a boy?</header>
+    <div class="button-container">
+        <button id="yesBtn">Yes</button>
+        <button id="noBtn">No</button>
+    </div>
+    <script>
+        const yesBtn = document.getElementById("yesBtn");
+        const noBtn = document.getElementById("noBtn");
+
+        yesBtn.addEventListener("mouseover", () => {
+            yesBtn.textContent = "No";
+        });
+
+        yesBtn.addEventListener("mouseout", () => {
+            yesBtn.textContent = "Yes";
+        });
+
+        noBtn.addEventListener("mouseover", () => {
+            noBtn.textContent = "Yes";
+        });
+
+        noBtn.addEventListener("mouseout", () => {
+            noBtn.textContent = "No";
+        });
+    </script>
+</body>
+</html>
